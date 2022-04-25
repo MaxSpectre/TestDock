@@ -1,5 +1,20 @@
 # GitHub Contribution Guidelines
 
+#### Navigate this page
+- [Branches description](#branches-description)
+  - [List of Main Branches](#type)
+    - [development](#code)
+    - [staging](#)
+    - [pre-production](#)
+    - [master](#master)
+  - [List of developed Branches]
+- [Convension of naming](#convension-of-naming)
+  - [Ticket branch](#ticket-branch)
+  - [Release branch](#release-branch)
+- [Example of Working Process]
+- [Committing your work](#committing-your-work)
+
+
 ## Branches description
 
 ### List of Main Branches
