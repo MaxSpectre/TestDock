@@ -6,9 +6,9 @@
 
 2. When you start to work with ticket (that related to this `release`), you should create branch for task from release. Commit you code as mach as you want. 
 
- > Try to commit often. Then you should merge your changes (all of your commits) back to release branch. Make it only via **Merge Request**. 
+    > Try to commit often. Then you should merge your changes (all of your commits) back to release branch. Make it only via **Merge Request**. 
 
- > Don't make a lot changes during developing of one task. Changes shouldn't be more then in 15 files. If you need more changes think about to divide one task to several smaller. There are could be a lot of task in one *release*.
+    > Don't make a lot changes during developing of one task. Changes shouldn't be more then in 15 files. If you need more changes think about to divide one task to several smaller. There are could be a lot of task in one *release*.
 
 3. When you think that `release` is ready, you should merge it into the `staging`. Marging should be only via **Merge Request**. We need `staging` branch to big testing of all functionality that were developed. If we have some trouble we need to fix it into release (maybe to create *fix* branch). Then we need to repeat **Merge proccess** to Staging. 
 
