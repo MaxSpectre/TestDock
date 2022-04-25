@@ -103,7 +103,7 @@ Slug Name of release can be come short explanation of `release` or it's number i
 
 ## Workflow Overview
 
-1. `master` -> `release-XXXX`
+1. `master` (create)-> `release-XXXX`
 
     Create the `release-XXXX` from `master`
     
@@ -115,7 +115,7 @@ Slug Name of release can be come short explanation of `release` or it's number i
     ```
 
 
-2. `release-XXXX` -> `task/XXXX`
+2. `release-XXXX` (create)-> `task/XXXX`
 
     To start working with task create branch for this task from `release`, that related to ticket. Commit you code as mach as you want. 
     
@@ -124,24 +124,24 @@ Slug Name of release can be come short explanation of `release` or it's number i
     > Try to [commit](#committing-your-work) often. Don't make a lot changes during developing of one task. Changes shouldn't be more then in 15 files. If you need more changes think about to divide one task to several smaller.
 
 
-3. `task/XXXX` (mr)-> `release-XXXX`
+3. `task/XXXX` (merge-request)-> `release-XXXX`
 
     When you finish your work with a task, make **Merge Request** back to **release**.
 
 
-4. `release-XXXX` (mr)-> `staging`
+4. `release-XXXX` (merge-request)-> `staging`
 
     When you think that `release` is ready prepare **Merge Request** into the `staging`. 
     We need `staging` branch to big testing of all functionality that were developed. If we have some trouble we need to fix it into release (maybe to create *fix* branch). Then we need to repeat **Merge proccess** to `staging`. 
 
 
-5. `release-XXXX` (mr)-> `pre-production`
+5. `release-XXXX` (merge-request)-> `pre-production`
 
     Make **Merge Request** from `release` to `pre-production` branch after successfuly testing on staging. 
     We need `pre-production` to make final test with copy of **production database**. To define all of the hidden issues.
 
 
-6. `pre-production` -> `master`
+6. `pre-production` (merge)-> `master`
 
     Make **Merge Request** from `pre-production` to `master` branch you sure that pre-production works fine. Production deployment should start only after `master` updating.
 
