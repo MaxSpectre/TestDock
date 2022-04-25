@@ -48,8 +48,25 @@ Branch from what we make daployment to production after all testing on previous 
 ## Dynamic Branches
 
 ### Ticket branches
+Create ticket branch from related `release` 
 
+> it is possible to make ticket branch directly from `master` if we need to make fast feature and deploy it without including in some release.
+
+Ticket branch should have name considering to Name convension
+
+#### Ticket branches Name convension
+```
     <type>/<ticket_id>-<ticket_slug>
+```
+
+#### Example of Naming
+```
+task/4412-archive
+task/4415-space
+fix/4516-project_audit
+improve/3322-yii_assets
+fix/3344
+```
 
 #### type
 The first part of the branch. It will fall into one of the following categories:
@@ -67,19 +84,17 @@ Short text in branch to understand task belonging. Write with using `snake_case`
 
 > ticket_slug is a manual part so you can ignore it. But try to write the most understandable commits.
 
-#### Example of Naming
-```
-task/4412-archive
-task/4415-space
-fix/4516-project_audit
-improve/3322-yii_assets
-fix/3344
-```
 
 
 ### Release branches
+Release branch should include a set of tasks and features that we want to prepare for deployment.
 
+Release branch should have name considering to Name convension
+
+#### Release branches Name convension
+```
     release/<slug_name>
+```
 
 #### slug_name
 Slug Name of release can be come short explanation of `release` or it's number if `release` so big and include a lot of features from different sides of project.
