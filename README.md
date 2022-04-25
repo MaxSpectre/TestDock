@@ -5,14 +5,14 @@
   - [Branch: development](#branch-development)
   - [Branch: staging](#branch-staging)
   - [Branch: pre-production](#branch-pre-production)
-  - [master](#master)
+  - [Branch: master](#branch-master)
 - [Dynamic Branches](#dynamic-branches)
   - [Ticket branches](#ticket-branches)
   - [Release branches](#release-branches)
 - [Convension of naming](#convension-of-naming)
   - [Ticket branch](#ticket-branch)
   - [Release branch](#release-branch)
-- [Example of Working Process]
+- [Workflow Overview](#workflow-overview)
 - [Committing your work](#committing-your-work)
 
 
@@ -103,7 +103,7 @@ Slug Name of release can be come short explanation of `release` or it's number i
 
 
 
-## Example of Working Process
+## Workflow Overview
 
 1. `master` -> `release-XXXX`
 
@@ -171,4 +171,3 @@ for.
 > Remember to commit often, and never to rewrite commit history once you've pushed
 > to origin. However, before pushing your commits, you're free to rebase and
 > rewrite as you like.
-
