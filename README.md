@@ -58,8 +58,8 @@ The first part of the branch. It will fall into one of the following categories:
 - `improve` - technical improvement that no need directly for execute some task. More often that we need to merge into all of the current releases.
 
 #### ticket_id
-ticket ID is the second part.
-For Zentao tickets this is just `id`
+ticket ID is the second part.<br />
+For Zentao tickets this is just `id`<br />
 For Jira: `<project_code>-<task-id>`
 
 #### ticket_slug
