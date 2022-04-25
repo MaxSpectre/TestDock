@@ -27,9 +27,9 @@
 
 #### type
 The first part of the branch. It will fall into one of the following categories:
-* `task` - the most common TYPE during developing
-* `fix` - if testers find some issue and you should manage it
-* `improve` - technical improvement that no need directly for execute some task. More often that we need to merge into all of the current releases.
+- `task` - the most common TYPE during developing
+- `fix` - if testers find some issue and you should manage it
+- `improve` - technical improvement that no need directly for execute some task. More often that we need to merge into all of the current releases.
 
 
 #### ticket_id
