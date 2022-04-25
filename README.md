@@ -41,11 +41,13 @@ Short text in branch to understand task belonging. Write with using `snake_case`
 > ticket_slug is a manual part so you can ignore it. But try to write the most understandable commits.
 
 #### Example of Naming
-`task/4412-archive`
-`task/4415-space`
-`fix/4516-project_audit`
-`improve/3322-yii_assets`
-`fix/3344`
+```
+task/4412-archive
+task/4415-space
+fix/4516-project_audit
+improve/3322-yii_assets
+fix/3344
+```
 
 Simply create your branch with the name as above, branching from main.
 ```
