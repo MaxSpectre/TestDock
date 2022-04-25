@@ -24,19 +24,16 @@
 
     <type>/<ticket_id>-<ticket_slug>
 
-
 #### type
 The first part of the branch. It will fall into one of the following categories:
 - `task` - the most common TYPE during developing
 - `fix` - if testers find some issue and you should manage it
 - `improve` - technical improvement that no need directly for execute some task. More often that we need to merge into all of the current releases.
 
-
 #### ticket_id
 ticket ID is the second part.
 For Zentao tickets this is just `id`
 For Jira: `<project_code>-<task-id>`
-
 
 #### ticket_slug
 Short text in branch to understand task belonging. Write with using `snake_case`. It can be the title of: **service**, **entity**, **page** or **functionality**. 
@@ -49,7 +46,6 @@ Short text in branch to understand task belonging. Write with using `snake_case`
 `fix/4516-project_audit`
 `improve/3322-yii_assets`
 `fix/3344`
-
 
 Simply create your branch with the name as above, branching from main.
 ```
@@ -67,11 +63,9 @@ git push -u origin task/4412-archive
 #### slug_name
 Slug Name of release can be come short explanation of `release` or it's number if `release` so big and include a lot of features from different sides of project.
 
-
 ## Branches description
 
 ### List of Main Branches
-
 - `development`
 - `staging`
 - `pre-production`
@@ -80,15 +74,12 @@ Slug Name of release can be come short explanation of `release` or it's number i
 > Deploying should be made only via Merge Request.
 > All of these branches have place on server.
 
-
 #### Development
 Branch for developer testing and QA testing. You can make merge request to this branch any release branch even if you don't finish all of the tasks in release. To see how is your feature can work on the server.
-
 
 #### Staging
 Staging branch is a first step before deploying some feature to production.
 Make Merge Request to it to start testing by QA 
-
 
 
 ### List of developed Branches
