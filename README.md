@@ -18,6 +18,8 @@
 
 
 
+
+
 ## Convension of naming
 
 ### Ticket branch
@@ -49,14 +51,6 @@ improve/3322-yii_assets
 fix/3344
 ```
 
-Simply create your branch with the name as above, branching from main.
-```
-git checkout master
-git pull
-git checkout -b task/4412-archive
-git push -u origin task/4412-archive
-```
-
 
 ### Release branch
 
@@ -64,6 +58,10 @@ git push -u origin task/4412-archive
 
 #### slug_name
 Slug Name of release can be come short explanation of `release` or it's number if `release` so big and include a lot of features from different sides of project.
+
+
+
+
 
 ## Branches description
 
