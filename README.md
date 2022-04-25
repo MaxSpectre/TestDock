@@ -28,17 +28,17 @@
 > Merging should be made only via **Merge Request**.
 > Merging to this branch leads to deploying.
 
-### Development
+### Branch: development
 Branch for developer testing and QA testing. You can make **Merge request** to this branch from `release` branch even if you don't finish all of the tasks. To see how is your feature can work on the server.
 
-### Staging
+### Branch: staging
 Staging branch is a first step before deploying some feature to production.
 Make marge to it to start testing by QA.
 
-### Pre-production
+### Branch: pre-production
 Pre-production is second step before daploying. QA engineers should make final test of all features with copy of production database.
 
-### Master
+### Branch: master
 Branch from what we make daployment to production after all testing on previous branches.
 
 
