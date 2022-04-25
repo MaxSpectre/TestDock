@@ -115,7 +115,8 @@ Slug Name of release can be come short explanation of `release` or it's number i
     git push -u origin <branch-name>
     ```
 
-2. `release-XXXX` -> `task/XXXX` 
+2. `release-XXXX` -> `task/XXXX`
+
     To start working with task create branch for this task from `release`, that related to ticket. Commit you code as mach as you want. 
     
     > If we need to make small task faster and don't include it to some release we might not create release for it. Just make `task` branch from master.
@@ -123,17 +124,21 @@ Slug Name of release can be come short explanation of `release` or it's number i
     > Try to [commit](#committing-your-work) often. Don't make a lot changes during developing of one task. Changes shouldn't be more then in 15 files. If you need more changes think about to divide one task to several smaller.
 
 3. `task/XXXX` (mr)-> `release-XXXX`
+
 When you finish your work with a task, make **Merge Request** back to **release**.
 
 4. `release-XXXX` (mr)-> `staging`
+
 When you think that `release` is ready prepare **Merge Request** into the `staging`. 
 We need `staging` branch to big testing of all functionality that were developed. If we have some trouble we need to fix it into release (maybe to create *fix* branch). Then we need to repeat **Merge proccess** to `staging`. 
 
 5. `release-XXXX` (mr)-> `pre-production`
+
 Make **Merge Request** from `release` to `pre-production` branch after successfuly testing on staging. 
 We need `pre-production` to make final test with copy of **production database**. To define all of the hidden issues.
 
 6. `pre-production` -> `master`
+
 Make **Merge Request** from `pre-production` to `master` branch you sure that pre-production works fine. Production deployment should start only after `master` updating.
 
 
