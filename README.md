@@ -1,13 +1,14 @@
 # GitHub Contribution Guidelines
 
 #### Navigate this page
-- [Branches description](#branches-description)
-  - [List of Main Branches](#type)
-    - [development](#code)
-    - [staging](#)
-    - [pre-production](#)
-    - [master](#master)
-  - [List of developed Branches]
+- [General Branches](#general-branches)
+  - [Branch: development](#branch-development)
+  - [Branch: staging](#branch-staging)
+  - [Branch: pre-production](#branch-pre-production)
+  - [master](#master)
+- [Dynamic Branches](#dynamic-branches)
+  - [Ticket branches](#ticket-branches)
+  - [Release branches](#release-branches)
 - [Convension of naming](#convension-of-naming)
   - [Ticket branch](#ticket-branch)
   - [Release branch](#release-branch)
@@ -15,36 +16,38 @@
 - [Committing your work](#committing-your-work)
 
 
-## Branches description
 
-### List of Main Branches
+
+
+## General Branches
 - `development`
 - `staging`
 - `pre-production`
 - `master` (`main`, `production`)
 
-> Deploying should be made only via Merge Request.
-> All of these branches have place on server.
+> Merging should be made only via **Merge Request**.
+> Merging to this branch leads to deploying.
 
-#### Development
-Branch for developer testing and QA testing. You can make merge request to this branch any release branch even if you don't finish all of the tasks in release. To see how is your feature can work on the server.
+### Development
+Branch for developer testing and QA testing. You can make **Merge request** to this branch from `release` branch even if you don't finish all of the tasks. To see how is your feature can work on the server.
 
-#### Staging
+### Staging
 Staging branch is a first step before deploying some feature to production.
-Make Merge Request to it to start testing by QA 
+Make marge to it to start testing by QA.
+
+### Pre-production
+Pre-production is second step before daploying. QA engineers should make final test of all features with copy of production database.
+
+### Master
+Branch from what we make daployment to production after all testing on previous branches.
 
 
-### List of developed Branches
-- `release/<slug_name>`
-- `<type>/<ticket_id>-<ticket_slug>`
 
 
 
+## Dynamic Branches
 
-
-## Convension of naming
-
-### Ticket branch
+### Ticket branches
 
     <type>/<ticket_id>-<ticket_slug>
 
@@ -74,7 +77,7 @@ fix/3344
 ```
 
 
-### Release branch
+### Release branches
 
     release/<slug_name>
 
@@ -88,7 +91,7 @@ Slug Name of release can be come short explanation of `release` or it's number i
 ## Example of Working Process
 
 1. `master` -> `release-XXXX`
-    Create the `release-XXXX` from `master` branch
+    Create the `release-XXXX` from `master`
     
     ```
     git checkout master
@@ -98,17 +101,25 @@ Slug Name of release can be come short explanation of `release` or it's number i
     ```
 
 2. `release-XXXX` -> `task/XXXX` 
-    To start working with task create branch for this task from `release`, that related to this ticket. Commit you code as mach as you want. 
+    To start working with task create branch for this task from `release`, that related to ticket. Commit you code as mach as you want. 
+    
+    > If we need to make small task faster and don't include it to some release we might not create release for it. Just make `task` branch from master.
 
-    > Try to commit often. Then you should merge your changes (all of your commits) back to release branch. Make it only via **Merge Request**. 
+    > Try to [commit](#committing-your-work) often. Don't make a lot changes during developing of one task. Changes shouldn't be more then in 15 files. If you need more changes think about to divide one task to several smaller.
 
-    > Don't make a lot changes during developing of one task. Changes shouldn't be more then in 15 files. If you need more changes think about to divide one task to several smaller. There are could be a lot of task in one release*.
+3. `task/XXXX` (mr)-> `release-XXXX`
+When you finish your work with a task, make **Merge Request** back to **release**.
 
-3. When you think that `release` is ready, you should merge it into the `staging`. Marging should be only via **Merge Request**. We need `staging` branch to big testing of all functionality that were developed. If we have some trouble we need to fix it into release (maybe to create *fix* branch). Then we need to repeat **Merge proccess** to Staging. 
+4. `release-XXXX` (mr)-> `staging`
+When you think that `release` is ready prepare **Merge Request** into the `staging`. 
+We need `staging` branch to big testing of all functionality that were developed. If we have some trouble we need to fix it into release (maybe to create *fix* branch). Then we need to repeat **Merge proccess** to `staging`. 
 
-4. If it is ok you can send `release` to the next step. Create **Merge Request** to the `pre-production` brach. We need `pre-production` to make final test with copy of **production database**. To define all of the hidden issues. If testers find something, make fix in release branch. 
+5. `release-XXXX` (mr)-> `pre-production`
+Make **Merge Request** from `release` to `pre-production` branch after successfuly testing on staging. 
+We need `pre-production` to make final test with copy of **production database**. To define all of the hidden issues.
 
-5. When it is ok then we ready to make deployment to production. To do this we need to make merge from `pre-production` branch to `master` branch.
+6. `pre-production` -> `master`
+Make **Merge Request** from `pre-production` to `master` branch you sure that pre-production works fine. Production deployment should start only after `master` updating.
 
 
 
