@@ -100,16 +100,18 @@ Slug Name of release can be come short explanation of `release` or it's number i
 
 
 ## Committing your work
-
-    [<ticket_id>] <short_description_of_commit>
-
+```
+    [XXXX] short description of_commit
+```
 
 All commits in the branch must start with `ticket_id` on the commit message
 e.g. `[4456]` or `[CAM-608]`.
 
 They should then go on to have a short explanation of what has been done in
 that commit, e.g:
+```
     [4456] Change primary colors from red to green
+```
 
 This allows us to easily see which issue each addition came from and what it's
 for.
