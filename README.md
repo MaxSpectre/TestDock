@@ -11,6 +11,7 @@
   - [Release branches](#release-branches)
 - [Workflow Overview](#workflow-overview)
 - [Committing your work](#committing-your-work)
+- [Deploying a release branch that has conflicts](#deploying-a-release-branch-that-has-conflicts)
 
 
 
@@ -168,3 +169,23 @@ for.
 > Remember to commit often, and never to rewrite commit history once you've pushed
 > to origin. However, before pushing your commits, you're free to rebase and
 > rewrite as you like.
+
+
+## Deploying a release branch that has conflicts
+
+0. If you're deploying to Production, you just need to merge master into your
+   release branch and solve conflicts there. If after doing this and pushing,
+   you still have conflicts, please contact a senior developer.
+1. For Staging, **create a `conflict-XXXXX` branch from master**, where XXXXX is
+   the same ID as the release branch has.
+2. **Merge Staging into the conflict branch** using a regular merge, e.g. `git
+   merge staging`.
+3. **Merge the release into the conflict branch** using a no-fast-forward merge,
+   e.g. `git merge --no-ff release-XXXXX`.
+4. **Solve the conflicts and merge.** We use a conflict branch for this so that
+   all of the Staging history doesn't enter the release branch when it is
+   deployed to Production.
+5. **Create a pull request to Staging from `conflict-XXXXX`** and then proceed as
+   above, making sure the conflict branch is immediately deleted on merge.
+   DO NOT MERGE THE CONFLICT BRANCH INTO PRODUCTION OR MASTER.
+
