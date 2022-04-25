@@ -9,9 +9,6 @@
 - [Dynamic Branches](#dynamic-branches)
   - [Ticket branches](#ticket-branches)
   - [Release branches](#release-branches)
-- [Convension of naming](#convension-of-naming)
-  - [Ticket branch](#ticket-branch)
-  - [Release branch](#release-branch)
 - [Workflow Overview](#workflow-overview)
 - [Committing your work](#committing-your-work)
 
